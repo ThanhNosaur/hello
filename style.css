@@ -1,0 +1,231 @@
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+overflow:hidden;
+}
+
+/* SKY */
+
+.sky{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(
+180deg,
+#ff9ecf,
+#ffd7a8,
+#ffe7d9
+);
+z-index:-5;
+}
+
+/* CLOUD */
+
+.cloud{
+position:absolute;
+background:white;
+border-radius:50px;
+opacity:0.9;
+}
+
+.cloud1{
+width:150px;
+height:50px;
+top:100px;
+left:-200px;
+animation:cloudMove 60s linear infinite;
+}
+
+.cloud2{
+width:100px;
+height:40px;
+top:200px;
+left:-150px;
+animation:cloudMove 80s linear infinite;
+}
+
+@keyframes cloudMove{
+
+0%{transform:translateX(0)}
+
+100%{transform:translateX(140vw)}
+
+}
+
+/* CITY */
+
+.city{
+position:absolute;
+bottom:120px;
+width:100%;
+height:120px;
+background:
+repeating-linear-gradient(
+to right,
+#333 0,
+#333 40px,
+#444 40px,
+#444 80px
+);
+opacity:0.4;
+}
+
+/* ROAD */
+
+.roadScene{
+position:relative;
+width:100%;
+height:300px;
+}
+
+.road{
+position:absolute;
+bottom:0;
+width:100%;
+height:140px;
+background:#3b3b3b;
+}
+
+.road:before{
+content:"";
+position:absolute;
+top:50%;
+width:100%;
+height:6px;
+
+background:repeating-linear-gradient(
+to right,
+white 0,
+white 40px,
+transparent 40px,
+transparent 80px
+);
+
+animation:roadMove 1s linear infinite;
+}
+
+@keyframes roadMove{
+
+0%{background-position:0 0}
+
+100%{background-position:-80px 0}
+
+}
+
+/* CAR */
+
+#car{
+position:absolute;
+bottom:60px;
+right:-200px;
+width:180px;
+transition:3s;
+}
+
+/* PAGE */
+
+.page{
+position:absolute;
+width:100%;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+opacity:0;
+pointer-events:none;
+transition:0.8s;
+}
+
+.page.active{
+opacity:1;
+pointer-events:auto;
+}
+
+/* TEXT */
+
+h1{
+font-size:42px;
+color:white;
+text-shadow:0 0 10px rgba(255,255,255,0.8);
+}
+
+/* BUTTON */
+
+.btn{
+padding:14px 30px;
+border:none;
+border-radius:30px;
+font-size:18px;
+background:#ff5fa2;
+color:white;
+cursor:pointer;
+margin:10px;
+transition:0.2s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+/* NO BUTTON */
+
+.no{
+position:relative;
+}
+
+/* POPUP */
+
+#popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+opacity:0;
+pointer-events:none;
+transition:0.4s;
+}
+
+#popup.show{
+opacity:1;
+pointer-events:auto;
+}
+
+.popupBox{
+background:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+}
+
+/* HEART */
+
+.heart{
+position:absolute;
+font-size:22px;
+color:#ff4f8a;
+animation:heartFly 3s linear forwards;
+}
+
+@keyframes heartFly{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-300px);
+opacity:0;
+}
+
+}
