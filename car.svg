@@ -1,11 +1,27 @@
 
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
 
-<rect x="20" y="40" width="140" height="40" rx="20" fill="#ff4f81"/>
+<!-- shadow -->
+<ellipse cx="150" cy="120" rx="110" ry="10" fill="rgba(0,0,0,0.2)"/>
 
-<rect x="60" y="20" width="60" height="30" rx="10" fill="#ff9ecf"/>
+<!-- body -->
+<rect x="40" y="60" width="200" height="40" rx="20" fill="#ff4f81"/>
 
-<circle cx="60" cy="85" r="12" fill="black"/>
-<circle cx="140" cy="85" r="12" fill="black"/>
+<!-- roof -->
+<path d="M80 60 L110 35 L180 35 L210 60 Z" fill="#ff7aa8"/>
+
+<!-- window -->
+<rect x="115" y="40" width="60" height="20" rx="6" fill="#d9f3ff"/>
+
+<!-- headlights -->
+<circle cx="235" cy="75" r="6" fill="#fff3a3"/>
+
+<!-- wheels -->
+
+<circle cx="95" cy="105" r="18" fill="#222"/>
+<circle cx="95" cy="105" r="9" fill="#aaa"/>
+
+<circle cx="200" cy="105" r="18" fill="#222"/>
+<circle cx="200" cy="105" r="9" fill="#aaa"/>
 
 </svg>
